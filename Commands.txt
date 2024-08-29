@@ -1,0 +1,308 @@
+General Commands 
+
+docker --version 
+
+Example: docker --version 
+
+Description: Shows Docker version information. 
+
+docker info 
+
+Example: docker info 
+
+Description: Displays system-wide information about Docker. 
+
+Container Management 
+
+docker run 
+
+Example: docker run -d --name mycontainer nginx 
+
+Description: Runs a command in a new container. Here, -d runs the container in detached mode, --name assigns a name, and nginx is the image. 
+
+docker ps 
+
+Example: docker ps 
+
+Description: Lists running containers. 
+
+docker ps -a 
+
+Example: docker ps -a 
+
+Description: Lists all containers, including stopped ones. 
+
+docker exec 
+
+Example: docker exec -it mycontainer /bin/bash 
+
+Description: Executes a command in a running container. Here, -it makes it interactive, and /bin/bash starts a Bash shell. 
+
+docker attach 
+
+Example: docker attach mycontainer 
+
+Description: Attaches to the standard input, output, and error streams of a running container. 
+
+docker stop 
+
+Example: docker stop mycontainer 
+
+Description: Stops a running container. 
+
+docker start 
+
+Example: docker start mycontainer 
+
+Description: Starts a stopped container. 
+
+docker restart 
+
+Example: docker restart mycontainer 
+
+Description: Restarts a running or stopped container. 
+
+docker kill 
+
+Example: docker kill mycontainer 
+
+Description: Sends a SIGKILL signal to a running container, terminating it immediately. 
+
+docker rm 
+
+Example: docker rm mycontainer 
+
+Description: Removes a container. It must be stopped first. 
+
+docker logs 
+
+Example: docker logs mycontainer 
+
+Description: Fetches the logs of a container. 
+
+docker inspect 
+
+Example: docker inspect mycontainer 
+
+Description: Returns detailed information about a container, image, volume, or network. 
+
+docker pause 
+
+Example: docker pause mycontainer 
+
+Description: Pauses a running container, suspending all processes. 
+
+docker unpause 
+
+Example: docker unpause mycontainer 
+
+Description: Resumes a paused container. 
+
+Image Management 
+
+docker build 
+
+Example: docker build -t myimage:latest . 
+
+Description: Builds an image from a Dockerfile in the current directory. -t tags the image. 
+
+docker pull 
+
+Example: docker pull ubuntu:20.04 
+
+Description: Pulls an image from a registry. 
+
+docker push 
+
+Example: docker push myimage:latest 
+
+Description: Pushes an image to a registry. 
+
+docker images 
+
+Example: docker images 
+
+Description: Lists all images. 
+
+docker rmi 
+
+Example: docker rmi myimage:latest 
+
+Description: Removes an image. 
+
+docker tag 
+
+Example: docker tag myimage:latest myrepo/myimage:latest 
+
+Description: Tags an image with a new name. 
+
+docker save 
+
+Example: docker save -o myimage.tar myimage:latest 
+
+Description: Saves an image to a tar archive. 
+
+docker load 
+
+Example: docker load -i myimage.tar 
+
+Description: Loads an image from a tar archive. 
+
+Network Management 
+
+docker network create 
+
+Example: docker network create mynetwork 
+
+Description: Creates a new network. 
+
+docker network ls 
+
+Example: docker network ls 
+
+Description: Lists networks. 
+
+docker network inspect 
+
+Example: docker network inspect mynetwork 
+
+Description: Displays detailed information about a network. 
+
+docker network rm 
+
+Example: docker network rm mynetwork 
+
+Description: Removes a network. 
+
+docker network connect 
+
+Example: docker network connect mynetwork mycontainer 
+
+Description: Connects a container to a network. 
+
+docker network disconnect 
+
+Example: docker network disconnect mynetwork mycontainer 
+
+Description: Disconnects a container from a network. 
+
+Volume Management 
+
+docker volume create 
+
+Example: docker volume create myvolume 
+
+Description: Creates a new volume. 
+
+docker volume ls 
+
+Example: docker volume ls 
+
+Description: Lists volumes. 
+
+docker volume inspect 
+
+Example: docker volume inspect myvolume 
+
+Description: Displays detailed information about a volume. 
+
+docker volume rm 
+
+Example: docker volume rm myvolume 
+
+Description: Removes a volume. 
+
+docker volume prune 
+
+Example: docker volume prune 
+
+Description: Removes all unused volumes. 
+
+System Management 
+
+docker system df 
+
+Example: docker system df 
+
+Description: Shows disk usage. 
+
+docker system prune 
+
+Example: docker system prune 
+
+Description: Removes unused data (containers, networks, images, build cache). 
+
+docker system events 
+
+Example: docker system events 
+
+Description: Gets real-time events from the Docker server. 
+
+docker system info 
+
+Example: docker system info 
+
+Description: Displays system-wide information. 
+
+Docker Compose Commands 
+
+docker-compose up 
+
+Example: docker-compose up -d 
+
+Description: Builds, (re)creates, starts, and attaches to containers for a service. -d runs in detached mode. 
+
+docker-compose down 
+
+Example: docker-compose down 
+
+Description: Stops and removes containers, networks, images, and volumes created by docker-compose up. 
+
+docker-compose build 
+
+Example: docker-compose build 
+
+Description: Builds or rebuilds services. 
+
+docker-compose logs 
+
+Example: docker-compose logs 
+
+Description: Views output from containers. 
+
+docker-compose ps 
+
+Example: docker-compose ps 
+
+Description: Lists containers. 
+
+docker-compose exec 
+
+Example: docker-compose exec web /bin/bash 
+
+Description: Executes a command in a running container. 
+
+docker-compose run 
+
+Example: docker-compose run web /bin/bash 
+
+Description: Runs a one-off command against a service. 
+
+docker-compose pull 
+
+Example: docker-compose pull 
+
+Description: Pulls service images. 
+
+docker-compose push 
+
+Example: docker-compose push 
+
+Description: Pushes service images. 
+
+These examples should help you get started with Docker and perform various operations. For more details on each command and its options, you can refer to the Docker documentation or use docker <command> --help. 
+
+ 
+ 
+
+ 
