@@ -1,6 +1,7 @@
 -docker images
 
 -docker rmi <image_id> or <image_name>
+-docker image rm <image1> <image2>
 
 -docker tag <image_name>:<tag> <new_image_name>:<new_tag>
 
