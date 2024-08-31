@@ -1,0 +1,35 @@
+-   docker ps
+
+-   docker ps -a
+
+-   docker rm <continer_id> or <continer_name>
+
+-   docker ps -aq    ->>>> to list all continers -->> -q will get ID's
+
+-   docker rm $(docker ps -aq)  ---->> delete all continers
+
+-   docker rmi
+
+-   docker rmi $(docker images -q)   ----> delete all images 
+
+-   docker run <image>
+
+-   docker run -d <image> (detached mode / run in background)
+            docker run -d jenkins/jenkins
+
+-   docker run -d  -p 8090:8080 <image>  (to assigns port and now its 80900) 
+
+            docker run -d  -p 8090:8080 jenkins/jenkins
+
+-   docker stop <continer_id> or <continer_name> (to stop running continer)
+
+-   docker stop -f <continer_id> or <continer_name> (to force stop running continer)
+
+-   docker run -d --name my_jenkins -p 8090:8080 <image>  (to name a continer)
+
+-   docker log <continer_id> or <continer_name>   (to get all logs) --> example to get jenkins password
+
+-   docker log -f <continer_id> or <continer_name> ( to follow logs) --> to see live logs 
+
+-   docker rm $(docker stop$(docker ps -aq))   ->>> to Stop and Delete all continers
+

