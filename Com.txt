@@ -12,6 +12,8 @@
 
 -   docker rmi $(docker images -q)   ----> delete all images 
 
+-   docker image prune --->> (will delete all images which are unused images / no containers are running by that image)
+
 -   docker run <image>
 
 -   docker run -d <image> (detached mode / run in background)
