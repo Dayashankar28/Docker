@@ -47,8 +47,6 @@
 
 -   docker exec <contain_name>  <cmd>   ---> (run command in container without login into it)
 
-sudo gedit /etc/default/grub
-sudo update-grub 
 
 
 
