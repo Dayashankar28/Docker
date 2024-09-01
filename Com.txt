@@ -35,5 +35,7 @@
 
 -   docker rm $(docker stop$(docker ps -aq))   ->>> to Stop and Delete all continers
 
+-   docker run -it -d --name <contain_name> <image_id>:<tag>
+
 
 
