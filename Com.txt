@@ -41,5 +41,11 @@
 
 -   docker Ctl+p+q  --->>> to exit from container without out stoping it...its a espace sequence
 
+-   docker stats
+
+-   docker top <contain_name> / <continer_id>  --->> (list all ruuuning process)
+
+-   docker exec <contain_name>  <cmd>   ---> (run command in container without login into it)
+
 
 
