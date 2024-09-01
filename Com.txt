@@ -47,6 +47,10 @@
 
 -   docker exec <contain_name>  <cmd>   ---> (run command in container without login into it)
 
+-   docker exec -it <contain_name> /bin/bash ---> (envoke new shell in container without touch main shell or process)
+
+                docker exec -it -d myubuntu /bin/bash
+
 
 
 
