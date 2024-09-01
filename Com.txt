@@ -29,15 +29,17 @@
 
 -   docker run -d --name my_jenkins -p 8090:8080 <image>  (to name a continer)
 
--   docker log <continer_id> or <continer_name>   (to get all logs) --> example to get jenkins password
+-   docker logs <continer_id> or <continer_name>   (to get all logs) --> example to get jenkins password
 
--   docker log -f <continer_id> or <continer_name> ( to follow logs) --> to see live logs 
+-   docker logs -f <continer_id> or <continer_name> ( to follow logs) --> to see live logs 
 
 -   docker rm $(docker stop$(docker ps -aq))   ->>> to Stop and Delete all continers
 
 -   docker run -it -d --name <contain_name> <image_id>:<tag>
 
--   
+-   docker attach <continer_id>  ---> (to login into container terminal)
+
+-   docker Ctl+p+q  --->>> to exit from container without out stoping it...its a espace sequence
 
 
 
