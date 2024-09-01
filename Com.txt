@@ -51,6 +51,14 @@
 
                 docker exec -it -d myubuntu /bin/bash
 
+-   docker build -t <image_name>:<tag> .   ->>> file should be Dockerfile in same path
+
+        docker build my_custom_ubuntu:v.1 .
+
+-   docker build -t <image_name>:<tag> -f <docker file name> . 
+
+        docker build my_custom_ubuntu:v.1 -f d1 .
+
 
 
 
