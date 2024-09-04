@@ -54,6 +54,36 @@ Docker prefers EXEC formate, but industry we write in SHELL format
             example:  - ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.93/bin/apache-tomcat-9.0.93-deployer.tar.gz /home/
 
 
+-   CMD vs ENTRYPOINT
+        
+        * Both CMD and ENTRYPOINT are used to define the default execution commandof the container (the command which will be executed in the container
+            as mainprocess).
+        * If we use multiple CMD or ENTRYPOINT in the same Dockerfile only the last one will be considered.
+
+        * If we use both CMD and ENTRYPOINT in the same Dockerfile, then ENTRYPOINT gets the highest priority and the command defined using CMD will be
+          asparameters to ENTRYPOINT.
+
+        Difference
+
+           - CMD can be completely overridden at the runtime (with docker run at the endwe can provide the command to override the CMD).
+           - ENTRYPOINT can't be overridden at the runtime but the command passed at the runtime will become parameters to ENTRYPOINT command defined in Dockerfile.
+            
+            Syntax: we can define command in 2 ways
+
+                1. shell format
+                
+                    CMD "ls -lrt"
+
+                2. EXEC format
+
+                    Always first element is command.
+                    Except first element all the other elements are parameters to command.
+                    
+                    CMD ["ls","-lrt"]
+
+
+
+
 
 
 
