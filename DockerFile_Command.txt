@@ -1,0 +1,37 @@
+-   FROM (used for base image)
+
+-   RUN (to run command)
+        
+        - We can RUN in two format
+            1.SHELL  // RUN apt update// -->> RUN CMD <options> <options>
+            2.EXEC   // EXEC ["apt","update"] --> EXEC ["CMD","<options","<"options"]
+
+            examples  :
+
+                RUN apt update
+                RUN apt install -y git curl sudo
+
+                EXEC ["ls", "-l", "-r", "-t"]
+
+'''
+
+Docker prefers EXEC formate, but industry we write in SHELL format
+
+'''
+
+-   COPY  (used to copy files from local to image)
+
+        Note: we need to calculate from build path, not from system path
+
+        COPY <source_path_from_build_context> <destination_inside_image>
+
+        examples  :
+
+        1.  COPY test.txt /home/test.txt 
+        2.  COPY ./demo/file1.txt /home/demo/file1.txt or /home/demo/file_to_container.txt
+
+
+
+
+
+
