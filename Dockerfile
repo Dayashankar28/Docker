@@ -19,8 +19,17 @@ FROM ubuntu
 #ENTRYPOINT [ "echo","Hello","Ranjitha" ] 
  
 #---- ENV ----#
-ENV F_NAME="daya"
-ENV L_NAME="shankar"
+#ENV L_NAME="shankar"
+#ENV F_NAME="daya"
+
+#ARG
+ARG WORK_DIR
+ARG DIR_NAME
+
+#WORKDIR
+WORKDIR ${WORK_DIR}
+RUN mkdir ${DIR_NAME}
+
 
 
 
