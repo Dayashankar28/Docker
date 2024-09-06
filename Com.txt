@@ -59,4 +59,9 @@
 
         docker build my_custom_ubuntu:v.1 -f d1 .
 
--   
+
+
+--------------------- DOCKER NETWORK ----------------------
+
+
+- docker run it --name <continer_name> --network host <image-image_name>
