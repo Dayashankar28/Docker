@@ -64,4 +64,53 @@
 --------------------- DOCKER NETWORK ----------------------
 
 
-- docker run it --name <continer_name> --network host <image-image_name>
+-	docker run it --name <continer_name> --network host <image-image_name>
+
+-	docker network ls (display docker network)
+
+-	docker network create --driver bridge my-custom-network  --> (create custom bridge)
+
+-	docker network connect <network-name> <container-name or id>  ---> (to connect container to another network)
+
+			docker network connect my-custom-network ng1
+
+-	docker network inspect <network-name>  ---> (to inspect docker network)
+
+-	sudo docker network rm <network-name> ---> (to remove custom network)
+
+-	sudo docker network prune ----> (To remove all the unused Docker Networks, you can use the prune command)
+
+
+
+------------------------- Docker Volumes --------------------------
+
+-	docker run --volume <host_location_path>:<conatiner_path> --name <contain_name> <image_name>
+
+			docker run -v ./data:/app/data --name ng1 nginx
+
+
+-	docker volume create my-vol
+
+-	docker volume ls
+
+		local               my-vol
+
+- 	docker volume inspect my-vol
+
+
+				[
+					{
+						"Driver": "local",
+						"Labels": {},
+						"Mountpoint": "/var/lib/docker/volumes/my-vol/_data",
+						"Name": "my-vol",
+						"Options": {},
+						"Scope": "local"
+					}
+				]
+
+-	docker volume rm my-vol
+
+-	docker run -d --name devtest --mount source=myvol2,target=/app  nginx:latest   ->> (Start a container with a volume)
+
+-	
